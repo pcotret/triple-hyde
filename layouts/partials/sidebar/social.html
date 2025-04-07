@@ -1,6 +1,6 @@
 <section class="social">
-	{{ with .Site.Params.social.twitter }}
-	<a href="https://twitter.com/{{.}}" rel="me">{{ partial "icon.html" "twitter" }}</a>
+	{{ with (or .Site.Params.social.x .Site.Params.social.twitter) }}
+	<a href="https://x.com/{{.}}" rel="me">{{ partial "icon.html" "x" }}</a>
 	{{ end }}
 	{{ with .Site.Params.social.facebook }}
 	<a href="https://facebook.com/{{.}}" rel="me">{{ partial "icon.html" "facebook" }}</a>
